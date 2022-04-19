@@ -1,3 +1,4 @@
+"""System module."""
 from distutils import core
 from pymongo import MongoClient
 from datetime import datetime
@@ -57,7 +58,7 @@ for i in cursor:
         color='darkblue'
     folium.Marker([coord[1], coord[0]], popup = "",
                  icon = folium.Icon(color=color, icon='university', prefix='fa')).add_to(m)
-outfp="base_map.html"
+outfp="docs/base_map.html"
 m.save(outfp)
 # print(len(list(cursor))) --> 7
 
@@ -66,4 +67,5 @@ m.save(outfp)
 #  1)centres de vactination geo < 50km  rennes
 #  2)nb de creneaux vaccin ouvert
 # f 3)ilter periode 26 - 29 janvier inclu 2022
-#  4)L’icône associée au nb de creneaux vaccin ouvert par centre de vaccination sera de couleur rouge, orange ou vert
+#  4)L’icône associée au nb de creneaux vaccin ouvert par centre de vaccination sera de couleur rouge,
+# orange ou vert
