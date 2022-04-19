@@ -38,4 +38,4 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 
 ## Carte
-<iframe src="../base_map.html" class="is-fullwidth" height="315px"></iframe>
+<iframe src="base_map.html" class="is-fullwidth" height="315px"></iframe>
