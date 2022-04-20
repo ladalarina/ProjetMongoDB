@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_ff78d8cb55c63eb4a9e71653b0e85817 {
+                #map_36d67b979834b246369fa79484ffd554 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,13 +35,37 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_ff78d8cb55c63eb4a9e71653b0e85817" ></div>
+            <div class="folium-map" id="map_36d67b979834b246369fa79484ffd554" ></div>
         
+    
+<div
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li>
+        <div style="padding: 10px; color: white; width: 35px;height: 35px; background-color: green;">
+            <i class="fa-rotate-0 fa fa-medkit"></i>
+        </div>
+        Entre 218 et 328</li>
+    <li>
+        <div style="padding: 10px; color: white; width: 35px;height: 35px; background-color: orange;">
+            <i class="fa-rotate-0 fa fa-medkit"></i>
+        </div>
+        Entre 109 et 218</li>
+    <li>
+        <div style="padding: 10px; color: white; width: 35px;height: 35px; background-color: red;">
+            <i class="fa-rotate-0 fa fa-medkit"></i>
+        </div>
+        Entre 0 et 109</li>
+  </ul>
+</div>
+</div>
 </body>
 <script>    
     
-            var map_ff78d8cb55c63eb4a9e71653b0e85817 = L.map(
-                "map_ff78d8cb55c63eb4a9e71653b0e85817",
+            var map_36d67b979834b246369fa79484ffd554 = L.map(
+                "map_36d67b979834b246369fa79484ffd554",
                 {
                     center: [48.117266, -1.6777926],
                     crs: L.CRS.EPSG3857,
@@ -50,188 +74,188 @@
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_ff78d8cb55c63eb4a9e71653b0e85817);
+            L.control.scale().addTo(map_36d67b979834b246369fa79484ffd554);
 
             
 
         
     
-            var tile_layer_9a49b9e16543f2c86c46dbe3432e3e48 = L.tileLayer(
+            var tile_layer_56d05cccc5dfa2940cc88dd0c2dcb2a5 = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
                 {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_ff78d8cb55c63eb4a9e71653b0e85817);
+            ).addTo(map_36d67b979834b246369fa79484ffd554);
         
     
-            var marker_4e124a6d6a7c7aafb546ecc68c02d89e = L.marker(
+            var marker_911b254a1ee95c4115e354369052d0eb = L.marker(
                 [48.0552, -1.73228],
                 {}
-            ).addTo(map_ff78d8cb55c63eb4a9e71653b0e85817);
+            ).addTo(map_36d67b979834b246369fa79484ffd554);
         
     
-            var icon_0e614649b2fdb59414bd39889aebc8b9 = L.AwesomeMarkers.icon(
+            var icon_2d356dcec65d65c96ef13a7c951135f7 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_4e124a6d6a7c7aafb546ecc68c02d89e.setIcon(icon_0e614649b2fdb59414bd39889aebc8b9);
+            marker_911b254a1ee95c4115e354369052d0eb.setIcon(icon_2d356dcec65d65c96ef13a7c951135f7);
         
     
-        var popup_54b3ba30825c4fbaf049c658b5c4827a = L.popup({"maxWidth": "100%"});
+        var popup_a353cff84ff2e438de35fd8faadf9743 = L.popup({"maxWidth": "100%"});
 
         
-            var html_5445b5c667cbffc5cd689b1e8333c4d0 = $(`<div id="html_5445b5c667cbffc5cd689b1e8333c4d0" style="width: 100.0%; height: 100.0%;">BRUZ - CDV Parc Expo  Nombre de places: 20</div>`)[0];
-            popup_54b3ba30825c4fbaf049c658b5c4827a.setContent(html_5445b5c667cbffc5cd689b1e8333c4d0);
+            var html_ed3bef14c39a79f238e01d6285c8d9ea = $(`<div id="html_ed3bef14c39a79f238e01d6285c8d9ea" style="width: 100.0%; height: 100.0%;">BRUZ - CDV Parc Expo  Nombre de places: 20</div>`)[0];
+            popup_a353cff84ff2e438de35fd8faadf9743.setContent(html_ed3bef14c39a79f238e01d6285c8d9ea);
         
 
-        marker_4e124a6d6a7c7aafb546ecc68c02d89e.bindPopup(popup_54b3ba30825c4fbaf049c658b5c4827a)
+        marker_911b254a1ee95c4115e354369052d0eb.bindPopup(popup_a353cff84ff2e438de35fd8faadf9743)
         ;
 
         
     
     
-            var marker_c3a215416827ae1f9ea98b07188e401c = L.marker(
+            var marker_3f31f2ea932dc276b9c6c9fb12dd64aa = L.marker(
                 [48.1104, -1.65391],
                 {}
-            ).addTo(map_ff78d8cb55c63eb4a9e71653b0e85817);
+            ).addTo(map_36d67b979834b246369fa79484ffd554);
         
     
-            var icon_057b27482d4d519c9275680e75eb7446 = L.AwesomeMarkers.icon(
+            var icon_3f2cddbffbed467ed9594f2eafc725de = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_c3a215416827ae1f9ea98b07188e401c.setIcon(icon_057b27482d4d519c9275680e75eb7446);
+            marker_3f31f2ea932dc276b9c6c9fb12dd64aa.setIcon(icon_3f2cddbffbed467ed9594f2eafc725de);
         
     
-        var popup_8d0197c9006ba2c4e53bd7035604e017 = L.popup({"maxWidth": "100%"});
+        var popup_b2d315af2e178dd7165e365d61cfa020 = L.popup({"maxWidth": "100%"});
 
         
-            var html_995b7c0f82669f403ad6767b5ad850a9 = $(`<div id="html_995b7c0f82669f403ad6767b5ad850a9" style="width: 100.0%; height: 100.0%;">RENNES - Centre Plaine de Baud (SDIS)  Nombre de places: 65</div>`)[0];
-            popup_8d0197c9006ba2c4e53bd7035604e017.setContent(html_995b7c0f82669f403ad6767b5ad850a9);
+            var html_be040f582b91b733cd42f5a696773185 = $(`<div id="html_be040f582b91b733cd42f5a696773185" style="width: 100.0%; height: 100.0%;">RENNES - Centre Plaine de Baud (SDIS)  Nombre de places: 65</div>`)[0];
+            popup_b2d315af2e178dd7165e365d61cfa020.setContent(html_be040f582b91b733cd42f5a696773185);
         
 
-        marker_c3a215416827ae1f9ea98b07188e401c.bindPopup(popup_8d0197c9006ba2c4e53bd7035604e017)
+        marker_3f31f2ea932dc276b9c6c9fb12dd64aa.bindPopup(popup_b2d315af2e178dd7165e365d61cfa020)
         ;
 
         
     
     
-            var marker_ca79179447642dc48b7d778f36fb54e5 = L.marker(
+            var marker_7056735591a6bcddee04f97da9e5b3be = L.marker(
                 [48.5495, -1.74728],
                 {}
-            ).addTo(map_ff78d8cb55c63eb4a9e71653b0e85817);
+            ).addTo(map_36d67b979834b246369fa79484ffd554);
         
     
-            var icon_e9fe59567d48ffe32b4ddf1781b82787 = L.AwesomeMarkers.icon(
+            var icon_cd3393f7b6148d4fbe04c29b22f42f5e = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_ca79179447642dc48b7d778f36fb54e5.setIcon(icon_e9fe59567d48ffe32b4ddf1781b82787);
+            marker_7056735591a6bcddee04f97da9e5b3be.setIcon(icon_cd3393f7b6148d4fbe04c29b22f42f5e);
         
     
-        var popup_05bc5f807887a5c579c50a296e67aa8f = L.popup({"maxWidth": "100%"});
+        var popup_f75ae4629bfd0f5bd4caefe9f9e01762 = L.popup({"maxWidth": "100%"});
 
         
-            var html_4b49de6d63fe11336b7c9a7bd9373c61 = $(`<div id="html_4b49de6d63fe11336b7c9a7bd9373c61" style="width: 100.0%; height: 100.0%;">DOL DE BGNE-Club de l'amitié  Nombre de places: 328</div>`)[0];
-            popup_05bc5f807887a5c579c50a296e67aa8f.setContent(html_4b49de6d63fe11336b7c9a7bd9373c61);
+            var html_72939b0aaef07365ed5844227053aba3 = $(`<div id="html_72939b0aaef07365ed5844227053aba3" style="width: 100.0%; height: 100.0%;">DOL DE BGNE-Club de l'amitié  Nombre de places: 328</div>`)[0];
+            popup_f75ae4629bfd0f5bd4caefe9f9e01762.setContent(html_72939b0aaef07365ed5844227053aba3);
         
 
-        marker_ca79179447642dc48b7d778f36fb54e5.bindPopup(popup_05bc5f807887a5c579c50a296e67aa8f)
+        marker_7056735591a6bcddee04f97da9e5b3be.bindPopup(popup_f75ae4629bfd0f5bd4caefe9f9e01762)
         ;
 
         
     
     
-            var marker_060dd8e7aa943b931a9ea642170e8b9d = L.marker(
+            var marker_e5701ee6c7338aab77a3b8894f3821f9 = L.marker(
                 [48.1181, -1.70075],
                 {}
-            ).addTo(map_ff78d8cb55c63eb4a9e71653b0e85817);
+            ).addTo(map_36d67b979834b246369fa79484ffd554);
         
     
-            var icon_dc91e23d6164d57b2535802d76d4a287 = L.AwesomeMarkers.icon(
+            var icon_a3f1b33c16a869be0ec9631ab41f3aa6 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_060dd8e7aa943b931a9ea642170e8b9d.setIcon(icon_dc91e23d6164d57b2535802d76d4a287);
+            marker_e5701ee6c7338aab77a3b8894f3821f9.setIcon(icon_a3f1b33c16a869be0ec9631ab41f3aa6);
         
     
-        var popup_70e7d548eea6850e770965692fd3a2f2 = L.popup({"maxWidth": "100%"});
+        var popup_309b9e255e0acfcde11e3954f040e34a = L.popup({"maxWidth": "100%"});
 
         
-            var html_2c118af2ca8a6fce7c8c9928d4090a36 = $(`<div id="html_2c118af2ca8a6fce7c8c9928d4090a36" style="width: 100.0%; height: 100.0%;">RENNES - Grand centre stade Robert Poirier  Nombre de places: 65</div>`)[0];
-            popup_70e7d548eea6850e770965692fd3a2f2.setContent(html_2c118af2ca8a6fce7c8c9928d4090a36);
+            var html_3e31943cdbb4dbf7e4a4d86009a3b691 = $(`<div id="html_3e31943cdbb4dbf7e4a4d86009a3b691" style="width: 100.0%; height: 100.0%;">RENNES - Grand centre stade Robert Poirier  Nombre de places: 65</div>`)[0];
+            popup_309b9e255e0acfcde11e3954f040e34a.setContent(html_3e31943cdbb4dbf7e4a4d86009a3b691);
         
 
-        marker_060dd8e7aa943b931a9ea642170e8b9d.bindPopup(popup_70e7d548eea6850e770965692fd3a2f2)
+        marker_e5701ee6c7338aab77a3b8894f3821f9.bindPopup(popup_309b9e255e0acfcde11e3954f040e34a)
         ;
 
         
     
     
-            var marker_752ff7cd6474af5836c1361a7ebe44ae = L.marker(
+            var marker_6a8ec84a2d783deaa4310a7b2e4c6482 = L.marker(
                 [47.9642, -1.79528],
                 {}
-            ).addTo(map_ff78d8cb55c63eb4a9e71653b0e85817);
+            ).addTo(map_36d67b979834b246369fa79484ffd554);
         
     
-            var icon_0efca0c33214247588699a4040897275 = L.AwesomeMarkers.icon(
+            var icon_82e64e8e8e26d36bbb30642001b0be8e = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_752ff7cd6474af5836c1361a7ebe44ae.setIcon(icon_0efca0c33214247588699a4040897275);
+            marker_6a8ec84a2d783deaa4310a7b2e4c6482.setIcon(icon_82e64e8e8e26d36bbb30642001b0be8e);
         
     
-        var popup_4675b63fa30c2bd05a478ddec178b22a = L.popup({"maxWidth": "100%"});
+        var popup_703b7c1977efe5d2ae084a25db7b2d2f = L.popup({"maxWidth": "100%"});
 
         
-            var html_30f6924efc4b9f6cff517c35dcae7b5c = $(`<div id="html_30f6924efc4b9f6cff517c35dcae7b5c" style="width: 100.0%; height: 100.0%;">GUICHEN - Espace Galatée  Nombre de places: 19</div>`)[0];
-            popup_4675b63fa30c2bd05a478ddec178b22a.setContent(html_30f6924efc4b9f6cff517c35dcae7b5c);
+            var html_5d9e7aee8c1437cd378a20c49474b9e4 = $(`<div id="html_5d9e7aee8c1437cd378a20c49474b9e4" style="width: 100.0%; height: 100.0%;">GUICHEN - Espace Galatée  Nombre de places: 19</div>`)[0];
+            popup_703b7c1977efe5d2ae084a25db7b2d2f.setContent(html_5d9e7aee8c1437cd378a20c49474b9e4);
         
 
-        marker_752ff7cd6474af5836c1361a7ebe44ae.bindPopup(popup_4675b63fa30c2bd05a478ddec178b22a)
+        marker_6a8ec84a2d783deaa4310a7b2e4c6482.bindPopup(popup_703b7c1977efe5d2ae084a25db7b2d2f)
         ;
 
         
     
     
-            var marker_5cdfb22a97c8f21de3148dd1da721fc0 = L.marker(
+            var marker_cb582c5f5f9f4d9bedb8573687a03749 = L.marker(
                 [47.718, -1.38837],
                 {}
-            ).addTo(map_ff78d8cb55c63eb4a9e71653b0e85817);
+            ).addTo(map_36d67b979834b246369fa79484ffd554);
         
     
-            var icon_910377b04d6c84b466d22399e290c338 = L.AwesomeMarkers.icon(
+            var icon_e9879bb3a15400f364caeff590102950 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
             );
-            marker_5cdfb22a97c8f21de3148dd1da721fc0.setIcon(icon_910377b04d6c84b466d22399e290c338);
+            marker_cb582c5f5f9f4d9bedb8573687a03749.setIcon(icon_e9879bb3a15400f364caeff590102950);
         
     
-        var popup_4ed3eacf940f0ef03ab31e9532b02548 = L.popup({"maxWidth": "100%"});
+        var popup_11b4ba58eaf5f92fefb20f122f417d8d = L.popup({"maxWidth": "100%"});
 
         
-            var html_36d2f6e8232c9b01a52a5bcaabcfbcfc = $(`<div id="html_36d2f6e8232c9b01a52a5bcaabcfbcfc" style="width: 100.0%; height: 100.0%;">Centre de Vaccination COVID - CHATEAUBRIANT  Nombre de places: 184</div>`)[0];
-            popup_4ed3eacf940f0ef03ab31e9532b02548.setContent(html_36d2f6e8232c9b01a52a5bcaabcfbcfc);
+            var html_da7ec3e1194ed9d89a5db7e5f8eb8d03 = $(`<div id="html_da7ec3e1194ed9d89a5db7e5f8eb8d03" style="width: 100.0%; height: 100.0%;">Centre de Vaccination COVID - CHATEAUBRIANT  Nombre de places: 184</div>`)[0];
+            popup_11b4ba58eaf5f92fefb20f122f417d8d.setContent(html_da7ec3e1194ed9d89a5db7e5f8eb8d03);
         
 
-        marker_5cdfb22a97c8f21de3148dd1da721fc0.bindPopup(popup_4ed3eacf940f0ef03ab31e9532b02548)
+        marker_cb582c5f5f9f4d9bedb8573687a03749.bindPopup(popup_11b4ba58eaf5f92fefb20f122f417d8d)
         ;
 
         
     
     
-            var marker_b455a4410e45888d173e71a0349cc1e2 = L.marker(
+            var marker_09b50c25b11925998e66efebc14e4232 = L.marker(
                 [48.3344, -1.17127],
                 {}
-            ).addTo(map_ff78d8cb55c63eb4a9e71653b0e85817);
+            ).addTo(map_36d67b979834b246369fa79484ffd554);
         
     
-            var icon_aa480d27078e708eb68475eae5aff230 = L.AwesomeMarkers.icon(
+            var icon_8e40dace38d7cfdc4e02689c9d4e2395 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
             );
-            marker_b455a4410e45888d173e71a0349cc1e2.setIcon(icon_aa480d27078e708eb68475eae5aff230);
+            marker_09b50c25b11925998e66efebc14e4232.setIcon(icon_8e40dace38d7cfdc4e02689c9d4e2395);
         
     
-        var popup_eafa67f8f38d3bb2c8101ea611cae794 = L.popup({"maxWidth": "100%"});
+        var popup_3cc852928e84a7241ecf7625c1dad23c = L.popup({"maxWidth": "100%"});
 
         
-            var html_dea0af601d42979244b24b04c232d144 = $(`<div id="html_dea0af601d42979244b24b04c232d144" style="width: 100.0%; height: 100.0%;">FOUGERES - Espace Aumaillerie  Nombre de places: 113</div>`)[0];
-            popup_eafa67f8f38d3bb2c8101ea611cae794.setContent(html_dea0af601d42979244b24b04c232d144);
+            var html_eba1c9a158780564ff0761789611c052 = $(`<div id="html_eba1c9a158780564ff0761789611c052" style="width: 100.0%; height: 100.0%;">FOUGERES - Espace Aumaillerie  Nombre de places: 113</div>`)[0];
+            popup_3cc852928e84a7241ecf7625c1dad23c.setContent(html_eba1c9a158780564ff0761789611c052);
         
 
-        marker_b455a4410e45888d173e71a0349cc1e2.bindPopup(popup_eafa67f8f38d3bb2c8101ea611cae794)
+        marker_09b50c25b11925998e66efebc14e4232.bindPopup(popup_3cc852928e84a7241ecf7625c1dad23c)
         ;
 
         

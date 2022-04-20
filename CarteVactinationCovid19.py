@@ -3,7 +3,8 @@ from distutils import core
 from pymongo import MongoClient
 from datetime import datetime
 import folium
-import pandas as pd
+from branca.element import Template, MacroElement
+from math import *
 
 ### connection a au serveur et à la bd
 db_uri = "mongodb+srv://etudiant:ur2@clusterm1.0rm7t.mongodb.net/"
@@ -61,7 +62,9 @@ res = list(cursor)
 nb_creneaux = []
 for i in res:
     nb_creneaux.append(i["nb"])
-tertile = max(nb_creneaux)/3
+max = max(nb_creneaux)
+tertile = floor(max/3)
+tertile2 = tertile * 2
 for i in res:
     coord = i["_id"]["coord"]
     if i["nb"] <= tertile:
@@ -73,6 +76,36 @@ for i in res:
     folium.Marker([coord[1], coord[0]], popup = i["_id"]["nom"]+ "\n Nombre de places: "+str(i["nb"]),
                  icon = folium.Icon(color=color, icon='medkit', prefix='fa')).add_to(m)
 outfp="docs/base_map.html"
+template = """
+{% macro html(this, kwargs) %}
+<div
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li>
+        <div style="padding: 10px; color: white; width: 35px;height: 35px; background-color: green;">
+            <i class="fa-rotate-0 fa fa-medkit"></i>
+        </div>
+        Entre """ + str(tertile2) + """ et """ + str(max) + """</li>
+    <li>
+        <div style="padding: 10px; color: white; width: 35px;height: 35px; background-color: orange;">
+            <i class="fa-rotate-0 fa fa-medkit"></i>
+        </div>
+        Entre """ + str(tertile) +""" et """ + str(tertile2) + """</li>
+    <li>
+        <div style="padding: 10px; color: white; width: 35px;height: 35px; background-color: red;">
+            <i class="fa-rotate-0 fa fa-medkit"></i>
+        </div>
+        Entre 0 et """ + str(tertile) + """</li>
+  </ul>
+</div>
+</div>
+{% endmacro %}"""
+
+macro = MacroElement()
+macro._template = Template(template)
+m.get_root().add_child(macro)
 m.save(outfp)
 
 
