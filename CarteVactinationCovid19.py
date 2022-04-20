@@ -54,7 +54,7 @@ cursor = coll.aggregate(
 ##--> 7
 #creation de la carte
 
-m = folium.Map(location=[lat, long], zoom_start=8.75,
+m = folium.Map(location=[lat, long], zoom_start=9,
                tiles='Stamen Toner', control_scale=True)
 
 res = list(cursor)
@@ -71,9 +71,8 @@ for i in res:
     else:
         color='green'
     folium.Marker([coord[1], coord[0]], popup = i["_id"]["nom"]+ "\n Nombre de places: "+str(i["nb"]),
-                 icon = folium.Icon(color=color, icon='university', prefix='fa')).add_to(m)
+                 icon = folium.Icon(color=color, icon='medkit', prefix='fa')).add_to(m)
 outfp="docs/base_map.html"
 m.save(outfp)
-
 
 
