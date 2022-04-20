@@ -76,6 +76,7 @@ for i in res:
     folium.Marker([coord[1], coord[0]], popup = i["_id"]["nom"]+ "\n Nombre de places: "+str(i["nb"]),
                  icon = folium.Icon(color=color, icon='medkit', prefix='fa')).add_to(m)
 outfp="docs/base_map.html"
+#légende
 template = """
 {% macro html(this, kwargs) %}
 <div
