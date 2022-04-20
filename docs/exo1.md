@@ -10,8 +10,12 @@ dans un rayon maximal de 50 km de Rennes. Les centres qu'on peut apercevoir sur 
 
 ### Carte des centres de vaccination ouverts entre le 26 et 29 janvier 2022
 
-<button>button</button>
+<button onclick="click()">button</button>
 <iframe src="base_map.html" class="is-fullwidth" height="500px" width="100%"></iframe>
 <iframe src="base_map1.html" class="is-fullwidth" height="500px" width="100%"></iframe>
 
-<script>console.log("test")</script>
+<script>
+    function click() {
+        console.log("test")
+    }
+</script>
