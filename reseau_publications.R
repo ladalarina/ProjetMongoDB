@@ -1,6 +1,5 @@
 library(mongolite)
 library(dplyr)
-library(igraph)
 library(visNetwork)
 
 # Connexion a la BDD
@@ -69,12 +68,9 @@ for (i in 1:nrow(data)){
 colnames(nb_article_commun) <- c("nom_prenom1","nom_prenom2","nb_articles_communs")
 liens_auteurs <- merge(liens_auteurs, nb_article_commun, by=c("nom_prenom1","nom_prenom2"))
 
-
-
-
 ## Creation du graphe
 
-# Création d'un df des noeuds representant les liens entre auteurs
+### Création d'un df des aretes representant les liens entre auteurs
 
 auteurs_chiffres <- as.data.frame(cbind(unique(auteurs_articles$nom_prenom), 1:20))
 colnames(auteurs_chiffres) <- c("nom_prenom1", "num1")
@@ -87,7 +83,7 @@ edges <- edges[,3:5]
 colnames(edges) <- c("value","from", "to")
 
 
-# Creation d'un df des noeuds pour définir la couleur des noeuds selon le nb d'articles écrits
+### Creation d'un df des noeuds pour définir la couleur des noeuds selon le nb d'articles écrits
 nodes <- auteurs_articles %>% select(nom_prenom, nb_articles) 
 nodes <- unique(nodes)
 nodes$nb_articles <- as.numeric(nodes$nb_articles)
