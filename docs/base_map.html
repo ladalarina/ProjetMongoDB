@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_ed9254aa4b99d41566001b035197ba7d {
+                #map_cac883df32810a998fa73c895b12ef42 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,203 +35,227 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_ed9254aa4b99d41566001b035197ba7d" ></div>
+            <div class="folium-map" id="map_cac883df32810a998fa73c895b12ef42" ></div>
         
+    
+<div
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li>
+        <div style="padding: 10px; color: white; width: 35px;height: 35px; background-color: green;">
+            <i class="fa-rotate-0 fa fa-medkit"></i>
+        </div>
+        Entre 218 et 328</li>
+    <li>
+        <div style="padding: 10px; color: white; width: 35px;height: 35px; background-color: orange;">
+            <i class="fa-rotate-0 fa fa-medkit"></i>
+        </div>
+        Entre 109 et 218</li>
+    <li>
+        <div style="padding: 10px; color: white; width: 35px;height: 35px; background-color: red;">
+            <i class="fa-rotate-0 fa fa-medkit"></i>
+        </div>
+        Entre 0 et 109</li>
+  </ul>
+</div>
+</div>
 </body>
 <script>    
     
-            var map_ed9254aa4b99d41566001b035197ba7d = L.map(
-                "map_ed9254aa4b99d41566001b035197ba7d",
+            var map_cac883df32810a998fa73c895b12ef42 = L.map(
+                "map_cac883df32810a998fa73c895b12ef42",
                 {
                     center: [48.117266, -1.6777926],
                     crs: L.CRS.EPSG3857,
-                    zoom: 10,
+                    zoom: 9,
                     zoomControl: true,
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_ed9254aa4b99d41566001b035197ba7d);
+            L.control.scale().addTo(map_cac883df32810a998fa73c895b12ef42);
 
             
 
         
     
-            var tile_layer_c5b3e428e296ae0e34d2dff3cfd512d9 = L.tileLayer(
+            var tile_layer_fb9647cdbfd2829fe8d5c453f9e20630 = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
                 {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_ed9254aa4b99d41566001b035197ba7d);
+            ).addTo(map_cac883df32810a998fa73c895b12ef42);
         
     
-            var marker_6f985097d13858142469dad651bd7d15 = L.marker(
-                [48.1104, -1.65391],
-                {}
-            ).addTo(map_ed9254aa4b99d41566001b035197ba7d);
-        
-    
-            var icon_add20b9fd63901c9756bb9144c80e5ba = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
-            );
-            marker_6f985097d13858142469dad651bd7d15.setIcon(icon_add20b9fd63901c9756bb9144c80e5ba);
-        
-    
-        var popup_8992df7d8399799d1eb4544a2a7504b8 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_196676b2fcad3b4beb517e3493790250 = $(`<div id="html_196676b2fcad3b4beb517e3493790250" style="width: 100.0%; height: 100.0%;"></div>`)[0];
-            popup_8992df7d8399799d1eb4544a2a7504b8.setContent(html_196676b2fcad3b4beb517e3493790250);
-        
-
-        marker_6f985097d13858142469dad651bd7d15.bindPopup(popup_8992df7d8399799d1eb4544a2a7504b8)
-        ;
-
-        
-    
-    
-            var marker_0932d73f13929077e883643beac58802 = L.marker(
+            var marker_ebb5c89b94e9c8bd7d5b5dabe2c27623 = L.marker(
                 [48.0552, -1.73228],
                 {}
-            ).addTo(map_ed9254aa4b99d41566001b035197ba7d);
+            ).addTo(map_cac883df32810a998fa73c895b12ef42);
         
     
-            var icon_a33b74cd57c9dc5025148bfb5dea6c79 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            var icon_ff55fd0141257827d17e276dd6be45a6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_0932d73f13929077e883643beac58802.setIcon(icon_a33b74cd57c9dc5025148bfb5dea6c79);
+            marker_ebb5c89b94e9c8bd7d5b5dabe2c27623.setIcon(icon_ff55fd0141257827d17e276dd6be45a6);
         
     
-        var popup_d4e89b778b81a52a1fbb06203cbf6c65 = L.popup({"maxWidth": "100%"});
+        var popup_fa60da79d206291a60b3bf626decb930 = L.popup({"maxWidth": "100%"});
 
         
-            var html_d28835cb00d68dbd23435cd1721a3036 = $(`<div id="html_d28835cb00d68dbd23435cd1721a3036" style="width: 100.0%; height: 100.0%;"></div>`)[0];
-            popup_d4e89b778b81a52a1fbb06203cbf6c65.setContent(html_d28835cb00d68dbd23435cd1721a3036);
+            var html_f4904f2aaeb08ffbed31c9804531e2cc = $(`<div id="html_f4904f2aaeb08ffbed31c9804531e2cc" style="width: 100.0%; height: 100.0%;">BRUZ - CDV Parc Expo  Nombre de places: 20</div>`)[0];
+            popup_fa60da79d206291a60b3bf626decb930.setContent(html_f4904f2aaeb08ffbed31c9804531e2cc);
         
 
-        marker_0932d73f13929077e883643beac58802.bindPopup(popup_d4e89b778b81a52a1fbb06203cbf6c65)
+        marker_ebb5c89b94e9c8bd7d5b5dabe2c27623.bindPopup(popup_fa60da79d206291a60b3bf626decb930)
         ;
 
         
     
     
-            var marker_3a7fbcae300514975b252589efbca007 = L.marker(
-                [48.1181, -1.70075],
+            var marker_a401aa06501bde5e400db44fe2e9f9ce = L.marker(
+                [48.1104, -1.65391],
                 {}
-            ).addTo(map_ed9254aa4b99d41566001b035197ba7d);
+            ).addTo(map_cac883df32810a998fa73c895b12ef42);
         
     
-            var icon_f0e4d62a1e734def0c8326a2a0fc6539 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            var icon_444ab95944b3947f4c1fc65266d63e0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_3a7fbcae300514975b252589efbca007.setIcon(icon_f0e4d62a1e734def0c8326a2a0fc6539);
+            marker_a401aa06501bde5e400db44fe2e9f9ce.setIcon(icon_444ab95944b3947f4c1fc65266d63e0d);
         
     
-        var popup_c86c91e63b0adc618babf8e3cba5ab09 = L.popup({"maxWidth": "100%"});
+        var popup_9a889e0010048743c1a7d09163c3748b = L.popup({"maxWidth": "100%"});
 
         
-            var html_d29232051fa08766249a8420513c65e8 = $(`<div id="html_d29232051fa08766249a8420513c65e8" style="width: 100.0%; height: 100.0%;"></div>`)[0];
-            popup_c86c91e63b0adc618babf8e3cba5ab09.setContent(html_d29232051fa08766249a8420513c65e8);
+            var html_aaea10c2b6b38da81e9c2a4958ebf787 = $(`<div id="html_aaea10c2b6b38da81e9c2a4958ebf787" style="width: 100.0%; height: 100.0%;">RENNES - Centre Plaine de Baud (SDIS)  Nombre de places: 65</div>`)[0];
+            popup_9a889e0010048743c1a7d09163c3748b.setContent(html_aaea10c2b6b38da81e9c2a4958ebf787);
         
 
-        marker_3a7fbcae300514975b252589efbca007.bindPopup(popup_c86c91e63b0adc618babf8e3cba5ab09)
+        marker_a401aa06501bde5e400db44fe2e9f9ce.bindPopup(popup_9a889e0010048743c1a7d09163c3748b)
         ;
 
         
     
     
-            var marker_03fc8c444f2f6032b3d0342e3452975a = L.marker(
-                [48.3344, -1.17127],
-                {}
-            ).addTo(map_ed9254aa4b99d41566001b035197ba7d);
-        
-    
-            var icon_1930270fee82faf764068375d8720fdb = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
-            );
-            marker_03fc8c444f2f6032b3d0342e3452975a.setIcon(icon_1930270fee82faf764068375d8720fdb);
-        
-    
-        var popup_926d024f70b7a0e7b8c7546f1dd54d9c = L.popup({"maxWidth": "100%"});
-
-        
-            var html_bce3e661f61558e5fe956eb3aed77283 = $(`<div id="html_bce3e661f61558e5fe956eb3aed77283" style="width: 100.0%; height: 100.0%;"></div>`)[0];
-            popup_926d024f70b7a0e7b8c7546f1dd54d9c.setContent(html_bce3e661f61558e5fe956eb3aed77283);
-        
-
-        marker_03fc8c444f2f6032b3d0342e3452975a.bindPopup(popup_926d024f70b7a0e7b8c7546f1dd54d9c)
-        ;
-
-        
-    
-    
-            var marker_fa653103a196f5b140d6fee586961d4f = L.marker(
+            var marker_99538c11bf22c491d0a379b26e12d3bd = L.marker(
                 [48.5495, -1.74728],
                 {}
-            ).addTo(map_ed9254aa4b99d41566001b035197ba7d);
+            ).addTo(map_cac883df32810a998fa73c895b12ef42);
         
     
-            var icon_39cf535999b126456a00c99e25c3ab16 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            var icon_bda2178f3f7cc8c5b74abcbb40be3305 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_fa653103a196f5b140d6fee586961d4f.setIcon(icon_39cf535999b126456a00c99e25c3ab16);
+            marker_99538c11bf22c491d0a379b26e12d3bd.setIcon(icon_bda2178f3f7cc8c5b74abcbb40be3305);
         
     
-        var popup_8bb9ea690032c499322517534dd3eba8 = L.popup({"maxWidth": "100%"});
+        var popup_0a9476395cc235b67d237c5c0903929f = L.popup({"maxWidth": "100%"});
 
         
-            var html_b18eaaf9d9fbe6c0ca5c4e4dfdaa4f0e = $(`<div id="html_b18eaaf9d9fbe6c0ca5c4e4dfdaa4f0e" style="width: 100.0%; height: 100.0%;"></div>`)[0];
-            popup_8bb9ea690032c499322517534dd3eba8.setContent(html_b18eaaf9d9fbe6c0ca5c4e4dfdaa4f0e);
+            var html_b7f4dbffd65dd0c71c21b9235b195675 = $(`<div id="html_b7f4dbffd65dd0c71c21b9235b195675" style="width: 100.0%; height: 100.0%;">DOL DE BGNE-Club de l'amitié  Nombre de places: 328</div>`)[0];
+            popup_0a9476395cc235b67d237c5c0903929f.setContent(html_b7f4dbffd65dd0c71c21b9235b195675);
         
 
-        marker_fa653103a196f5b140d6fee586961d4f.bindPopup(popup_8bb9ea690032c499322517534dd3eba8)
+        marker_99538c11bf22c491d0a379b26e12d3bd.bindPopup(popup_0a9476395cc235b67d237c5c0903929f)
         ;
 
         
     
     
-            var marker_7a79ae7da58fdf1b68d7a220a445a7b0 = L.marker(
+            var marker_938b48e9a662e9a8651a36c2c682cc18 = L.marker(
+                [48.1181, -1.70075],
+                {}
+            ).addTo(map_cac883df32810a998fa73c895b12ef42);
+        
+    
+            var icon_9c0b9f1418b00a940a09e774eaa387aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_938b48e9a662e9a8651a36c2c682cc18.setIcon(icon_9c0b9f1418b00a940a09e774eaa387aa);
+        
+    
+        var popup_b3a6d9df180ae3d14e63cf9f65066dad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_715924cc45a8d6f3c1663100acc6a681 = $(`<div id="html_715924cc45a8d6f3c1663100acc6a681" style="width: 100.0%; height: 100.0%;">RENNES - Grand centre stade Robert Poirier  Nombre de places: 65</div>`)[0];
+            popup_b3a6d9df180ae3d14e63cf9f65066dad.setContent(html_715924cc45a8d6f3c1663100acc6a681);
+        
+
+        marker_938b48e9a662e9a8651a36c2c682cc18.bindPopup(popup_b3a6d9df180ae3d14e63cf9f65066dad)
+        ;
+
+        
+    
+    
+            var marker_63951c14e8cf3016ebf56856a02f4215 = L.marker(
                 [47.9642, -1.79528],
                 {}
-            ).addTo(map_ed9254aa4b99d41566001b035197ba7d);
+            ).addTo(map_cac883df32810a998fa73c895b12ef42);
         
     
-            var icon_b2a64f6c59e576ff7459f3900d6f51bd = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            var icon_8460e9d413975b735b5b1dc5e5086b53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_7a79ae7da58fdf1b68d7a220a445a7b0.setIcon(icon_b2a64f6c59e576ff7459f3900d6f51bd);
+            marker_63951c14e8cf3016ebf56856a02f4215.setIcon(icon_8460e9d413975b735b5b1dc5e5086b53);
         
     
-        var popup_e96eac296d5d1accce112b26add563f1 = L.popup({"maxWidth": "100%"});
+        var popup_e71fbc6fbc72a6c8f37f58fb9931d95c = L.popup({"maxWidth": "100%"});
 
         
-            var html_90e9f2b71f253e5c07960f943b409cb0 = $(`<div id="html_90e9f2b71f253e5c07960f943b409cb0" style="width: 100.0%; height: 100.0%;"></div>`)[0];
-            popup_e96eac296d5d1accce112b26add563f1.setContent(html_90e9f2b71f253e5c07960f943b409cb0);
+            var html_343b4738dc79abe8c8187192b3132471 = $(`<div id="html_343b4738dc79abe8c8187192b3132471" style="width: 100.0%; height: 100.0%;">GUICHEN - Espace Galatée  Nombre de places: 19</div>`)[0];
+            popup_e71fbc6fbc72a6c8f37f58fb9931d95c.setContent(html_343b4738dc79abe8c8187192b3132471);
         
 
-        marker_7a79ae7da58fdf1b68d7a220a445a7b0.bindPopup(popup_e96eac296d5d1accce112b26add563f1)
+        marker_63951c14e8cf3016ebf56856a02f4215.bindPopup(popup_e71fbc6fbc72a6c8f37f58fb9931d95c)
         ;
 
         
     
     
-            var marker_58e6cedcb431db50ea59e06832f20b08 = L.marker(
+            var marker_aa84c0f0cc2452c9f222cbc2b0b4d6ae = L.marker(
                 [47.718, -1.38837],
                 {}
-            ).addTo(map_ed9254aa4b99d41566001b035197ba7d);
+            ).addTo(map_cac883df32810a998fa73c895b12ef42);
         
     
-            var icon_cb74a9dccf5ad2788af90fbda8ef886f = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            var icon_f4875cf60ca892ecbda086d64745e5a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
             );
-            marker_58e6cedcb431db50ea59e06832f20b08.setIcon(icon_cb74a9dccf5ad2788af90fbda8ef886f);
+            marker_aa84c0f0cc2452c9f222cbc2b0b4d6ae.setIcon(icon_f4875cf60ca892ecbda086d64745e5a9);
         
     
-        var popup_3a2f4b105b36586c8c74a0b49c464909 = L.popup({"maxWidth": "100%"});
+        var popup_16c200f7c499a422d2372f82b7747074 = L.popup({"maxWidth": "100%"});
 
         
-            var html_3da332554cd6703abf50220cf6ad1305 = $(`<div id="html_3da332554cd6703abf50220cf6ad1305" style="width: 100.0%; height: 100.0%;"></div>`)[0];
-            popup_3a2f4b105b36586c8c74a0b49c464909.setContent(html_3da332554cd6703abf50220cf6ad1305);
+            var html_c929b78532fa1671b446ff6f3af1d874 = $(`<div id="html_c929b78532fa1671b446ff6f3af1d874" style="width: 100.0%; height: 100.0%;">Centre de Vaccination COVID - CHATEAUBRIANT  Nombre de places: 184</div>`)[0];
+            popup_16c200f7c499a422d2372f82b7747074.setContent(html_c929b78532fa1671b446ff6f3af1d874);
         
 
-        marker_58e6cedcb431db50ea59e06832f20b08.bindPopup(popup_3a2f4b105b36586c8c74a0b49c464909)
+        marker_aa84c0f0cc2452c9f222cbc2b0b4d6ae.bindPopup(popup_16c200f7c499a422d2372f82b7747074)
+        ;
+
+        
+    
+    
+            var marker_54b37e21e2cf484bf56664a753a33a34 = L.marker(
+                [48.3344, -1.17127],
+                {}
+            ).addTo(map_cac883df32810a998fa73c895b12ef42);
+        
+    
+            var icon_adb65fe2230dec163826cbcf4afaa6ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_54b37e21e2cf484bf56664a753a33a34.setIcon(icon_adb65fe2230dec163826cbcf4afaa6ee);
+        
+    
+        var popup_57af4255b2223cc96101e97a9a0aebe9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e8fd0c3add8e3c855749bd3c123a1cb = $(`<div id="html_0e8fd0c3add8e3c855749bd3c123a1cb" style="width: 100.0%; height: 100.0%;">FOUGERES - Espace Aumaillerie  Nombre de places: 113</div>`)[0];
+            popup_57af4255b2223cc96101e97a9a0aebe9.setContent(html_0e8fd0c3add8e3c855749bd3c123a1cb);
+        
+
+        marker_54b37e21e2cf484bf56664a753a33a34.bindPopup(popup_57af4255b2223cc96101e97a9a0aebe9)
         ;
 
         

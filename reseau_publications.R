@@ -7,7 +7,7 @@ mdb = mongo(collection="hal_irisa_2021", db="publications",
             url=url,
             verbose=TRUE)
 
-# Récupération des 20 auteurs ayant écrit le plus d'articles et création d'un df
+# R?cup?ration des 20 auteurs ayant ?crit le plus d'articles et cr?ation d'un df
 req='[
   {"$unwind" : "$authors"}, 
   {"$group" : {"_id" : "$authors", "nb" : {"$sum" : 1}}}, 
@@ -24,8 +24,8 @@ auteurs <- data.frame(
   nb_articles = auteurs$nb
 )
 
-# Récupération de la liste des articles pour chaque auteur 
-q <-'{"authors" : {"$elemMatch" : {"name" : "Lefèvre","firstname" : "Sébastien" }}}'
+# R?cup?ration de la liste des articles pour chaque auteur 
+q <-'{"authors" : {"$elemMatch" : {"name" : "Lef?vre","firstname" : "S?bastien" }}}'
 article <- as.data.frame(mdb$find(q))
 
 liste_noms = c()
@@ -54,6 +54,4 @@ auteurs_articles = tibble(
 )
 auteurs_articles = as.data.frame(auteurs_articles)
 #write.csv(auteurs_articles, "chemin/auteurs_articles.csv")
-
-
 

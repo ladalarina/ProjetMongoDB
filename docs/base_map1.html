@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1fe306a6864282f11a1ac025c7fe4e40 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_1fe306a6864282f11a1ac025c7fe4e40" ></div>
+        
+    
+<div id="lada"
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+    <div class='legend-scale'>
+    <ul class='legend-labels'>
+        <li><div style="width: 25px; height: 25px; background-color: green "></div>1re injection (avec 2de injection) vaccin COVID-19 enfants (5-11 ans - Pfizer-BioNTech)</li><li><div style="width: 25px; height: 25px; background-color: blue "></div>1re injection (avec 2de injection) vaccin COVID-19 (Pfizer-BioNTech)</li><li><div style="width: 25px; height: 25px; background-color: purple "></div>1re injection (avec 2de injection) vaccin COVID-19 (Moderna)</li>
+    </ul>
+    </div>
+</div>
+</body>
+<script>    
+    
+            var map_1fe306a6864282f11a1ac025c7fe4e40 = L.map(
+                "map_1fe306a6864282f11a1ac025c7fe4e40",
+                {
+                    center: [48.117266, -1.6777926],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 9,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+
+            
+
+        
+    
+            var tile_layer_5beacf497c2307f00ef618728799e034 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var marker_00ca0a92315a876ca3d1aae3318d04c9 = L.marker(
+                [47.3536, -0.445881],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_c5cea34161014c84ac70409c17305cee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_00ca0a92315a876ca3d1aae3318d04c9.setIcon(icon_c5cea34161014c84ac70409c17305cee);
+        
+    
+        var popup_5827ea317a772b4fab642acaf22010f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c52af259815970317b70a091324e1716 = $(`<div id="html_c52af259815970317b70a091324e1716" style="width: 100.0%; height: 100.0%;">Centre de vaccination - BRISSAC - Complexe Sportif1re injection (avec 2de injection) vaccin COVID-19 (Pfizer-BioNTech)</div>`)[0];
+            popup_5827ea317a772b4fab642acaf22010f8.setContent(html_c52af259815970317b70a091324e1716);
+        
+
+        marker_00ca0a92315a876ca3d1aae3318d04c9.bindPopup(popup_5827ea317a772b4fab642acaf22010f8)
+        ;
+
+        
+    
+    
+            var marker_8d8f77d87341a8ff4e7ab3fa2f8eef4f = L.marker(
+                [47.718, -1.38837],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_5ebefb715ba0928e87bc0fcce87b697b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_8d8f77d87341a8ff4e7ab3fa2f8eef4f.setIcon(icon_5ebefb715ba0928e87bc0fcce87b697b);
+        
+    
+        var popup_fbbfb3559cf775c16780d4c2107505bb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_88ec5806ae6fe0d4b432de0c428f9dba = $(`<div id="html_88ec5806ae6fe0d4b432de0c428f9dba" style="width: 100.0%; height: 100.0%;">Centre de Vaccination COVID - CHATEAUBRIANT1re injection (avec 2de injection) vaccin COVID-19 (Moderna)</div>`)[0];
+            popup_fbbfb3559cf775c16780d4c2107505bb.setContent(html_88ec5806ae6fe0d4b432de0c428f9dba);
+        
+
+        marker_8d8f77d87341a8ff4e7ab3fa2f8eef4f.bindPopup(popup_fbbfb3559cf775c16780d4c2107505bb)
+        ;
+
+        
+    
+    
+            var marker_ae041cccd6dbeb79d9dd83491d6cfaf7 = L.marker(
+                [48.2969, -0.611258],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_a058fd0906f98adeacae92e63405648e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ae041cccd6dbeb79d9dd83491d6cfaf7.setIcon(icon_a058fd0906f98adeacae92e63405648e);
+        
+    
+        var popup_1317f52ad023f827d6aa601320cb7651 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_20ee759ed021f916ef8077df550d7bdb = $(`<div id="html_20ee759ed021f916ef8077df550d7bdb" style="width: 100.0%; height: 100.0%;">Centre de Vaccination - MAYENNE - Salle polyvalente1re injection (avec 2de injection) vaccin COVID-19 (Pfizer-BioNTech)</div>`)[0];
+            popup_1317f52ad023f827d6aa601320cb7651.setContent(html_20ee759ed021f916ef8077df550d7bdb);
+        
+
+        marker_ae041cccd6dbeb79d9dd83491d6cfaf7.bindPopup(popup_1317f52ad023f827d6aa601320cb7651)
+        ;
+
+        
+    
+    
+            var marker_50549b4fdc6e86a0d9b04d444d1c82f5 = L.marker(
+                [47.8675, -3.54947],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_b3f11ab08340b92286692b7cd6b65adb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_50549b4fdc6e86a0d9b04d444d1c82f5.setIcon(icon_b3f11ab08340b92286692b7cd6b65adb);
+        
+    
+        var popup_ef7ec3cb4cf0095d0dc8fec9e4f887b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b9065b97a3cefab7c01961552a811793 = $(`<div id="html_b9065b97a3cefab7c01961552a811793" style="width: 100.0%; height: 100.0%;">QUIMPERLE - Gymnase Cordiers1re injection (avec 2de injection) vaccin COVID-19 (Moderna)</div>`)[0];
+            popup_ef7ec3cb4cf0095d0dc8fec9e4f887b8.setContent(html_b9065b97a3cefab7c01961552a811793);
+        
+
+        marker_50549b4fdc6e86a0d9b04d444d1c82f5.bindPopup(popup_ef7ec3cb4cf0095d0dc8fec9e4f887b8)
+        ;
+
+        
+    
+    
+            var marker_88d571dce52676d4114b6225a17e2332 = L.marker(
+                [47.9642, -1.79528],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_2395eb720e5cd4866474a71b6ea87bc8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_88d571dce52676d4114b6225a17e2332.setIcon(icon_2395eb720e5cd4866474a71b6ea87bc8);
+        
+    
+        var popup_1abdcb4753e092943f6148442eee16b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_59863add31a2649138262086803238c3 = $(`<div id="html_59863add31a2649138262086803238c3" style="width: 100.0%; height: 100.0%;">GUICHEN - Espace Galatée1re injection (avec 2de injection) vaccin COVID-19 (Pfizer-BioNTech)</div>`)[0];
+            popup_1abdcb4753e092943f6148442eee16b6.setContent(html_59863add31a2649138262086803238c3);
+        
+
+        marker_88d571dce52676d4114b6225a17e2332.bindPopup(popup_1abdcb4753e092943f6148442eee16b6)
+        ;
+
+        
+    
+    
+            var marker_d54346b879701747f6cb6b942f131805 = L.marker(
+                [47.9072, -3.83858],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_6d652779c6f85deca890e92d84adba48 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_d54346b879701747f6cb6b942f131805.setIcon(icon_6d652779c6f85deca890e92d84adba48);
+        
+    
+        var popup_20cb864e0107b436995cc23c4206b836 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_503429ea8fe2b7a6c4e0ab8fadc5bb77 = $(`<div id="html_503429ea8fe2b7a6c4e0ab8fadc5bb77" style="width: 100.0%; height: 100.0%;">MELGVEN - Salle polyvalente1re injection (avec 2de injection) vaccin COVID-19 (Moderna)</div>`)[0];
+            popup_20cb864e0107b436995cc23c4206b836.setContent(html_503429ea8fe2b7a6c4e0ab8fadc5bb77);
+        
+
+        marker_d54346b879701747f6cb6b942f131805.bindPopup(popup_20cb864e0107b436995cc23c4206b836)
+        ;
+
+        
+    
+    
+            var marker_f5aed9469eca5fd79ed6a7bdbfce3ba4 = L.marker(
+                [48.5495, -1.74728],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_ff4418c46b74c356119279f307c63d04 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_f5aed9469eca5fd79ed6a7bdbfce3ba4.setIcon(icon_ff4418c46b74c356119279f307c63d04);
+        
+    
+        var popup_ad132e54b5d8022ea1bdb68866acfcf5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ffa8e43bdb2b4fb5e2cb7f4bac3e16c4 = $(`<div id="html_ffa8e43bdb2b4fb5e2cb7f4bac3e16c4" style="width: 100.0%; height: 100.0%;">DOL DE BGNE-Club de l'amitié1re injection (avec 2de injection) vaccin COVID-19 (Moderna)</div>`)[0];
+            popup_ad132e54b5d8022ea1bdb68866acfcf5.setContent(html_ffa8e43bdb2b4fb5e2cb7f4bac3e16c4);
+        
+
+        marker_f5aed9469eca5fd79ed6a7bdbfce3ba4.bindPopup(popup_ad132e54b5d8022ea1bdb68866acfcf5)
+        ;
+
+        
+    
+    
+            var marker_74a979a966b43cb656d8707c9394696c = L.marker(
+                [48.1181, -1.70075],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_743488cbde29d69b2eb844d5954e2cd2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_74a979a966b43cb656d8707c9394696c.setIcon(icon_743488cbde29d69b2eb844d5954e2cd2);
+        
+    
+        var popup_cf0c4ec2f9f511a608d0e3612d4a0cfe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_34566a5fc8a586b3e3828792aba26ff9 = $(`<div id="html_34566a5fc8a586b3e3828792aba26ff9" style="width: 100.0%; height: 100.0%;">RENNES - Grand centre stade Robert Poirier1re injection (avec 2de injection) vaccin COVID-19 (Pfizer-BioNTech)</div>`)[0];
+            popup_cf0c4ec2f9f511a608d0e3612d4a0cfe.setContent(html_34566a5fc8a586b3e3828792aba26ff9);
+        
+
+        marker_74a979a966b43cb656d8707c9394696c.bindPopup(popup_cf0c4ec2f9f511a608d0e3612d4a0cfe)
+        ;
+
+        
+    
+    
+            var marker_6fae2b2d716a8e07ed8bb8ec6c1d9f67 = L.marker(
+                [48.0552, -1.73228],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_687ac226ce63f8ae60ec04e3274739e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6fae2b2d716a8e07ed8bb8ec6c1d9f67.setIcon(icon_687ac226ce63f8ae60ec04e3274739e7);
+        
+    
+        var popup_8c3e3d8354d9ab08ce32665bbc9ebd48 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d4bdff976c004e263dcc4e06aa5bd42 = $(`<div id="html_3d4bdff976c004e263dcc4e06aa5bd42" style="width: 100.0%; height: 100.0%;">BRUZ - CDV Parc Expo1re injection (avec 2de injection) vaccin COVID-19 enfants (5-11 ans - Pfizer-BioNTech)</div>`)[0];
+            popup_8c3e3d8354d9ab08ce32665bbc9ebd48.setContent(html_3d4bdff976c004e263dcc4e06aa5bd42);
+        
+
+        marker_6fae2b2d716a8e07ed8bb8ec6c1d9f67.bindPopup(popup_8c3e3d8354d9ab08ce32665bbc9ebd48)
+        ;
+
+        
+    
+    
+            var marker_9177ed3027fa0904ded56c12d04ec860 = L.marker(
+                [48.6774, -1.86378],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_e19fe0b40079471ebd8da5bc50c355d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_9177ed3027fa0904ded56c12d04ec860.setIcon(icon_e19fe0b40079471ebd8da5bc50c355d2);
+        
+    
+        var popup_011a4c3ba9746b83874c452e496fe5ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2defcfdcd000033811f3b97c81a63304 = $(`<div id="html_2defcfdcd000033811f3b97c81a63304" style="width: 100.0%; height: 100.0%;">CANCALE - Salle Cancaven1re injection (avec 2de injection) vaccin COVID-19 (Pfizer-BioNTech)</div>`)[0];
+            popup_011a4c3ba9746b83874c452e496fe5ac.setContent(html_2defcfdcd000033811f3b97c81a63304);
+        
+
+        marker_9177ed3027fa0904ded56c12d04ec860.bindPopup(popup_011a4c3ba9746b83874c452e496fe5ac)
+        ;
+
+        
+    
+    
+            var marker_dbc6b9ee95d0290f6e62ba4aaecdc467 = L.marker(
+                [48.3344, -1.17127],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_da0a97b1d53f9d3e79b1341cce65ac2e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_dbc6b9ee95d0290f6e62ba4aaecdc467.setIcon(icon_da0a97b1d53f9d3e79b1341cce65ac2e);
+        
+    
+        var popup_346bbe6a0e21806a5404a69583ad18a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_58a345629af982533b0e06b9f34196ba = $(`<div id="html_58a345629af982533b0e06b9f34196ba" style="width: 100.0%; height: 100.0%;">FOUGERES - Espace Aumaillerie1re injection (avec 2de injection) vaccin COVID-19 (Pfizer-BioNTech)</div>`)[0];
+            popup_346bbe6a0e21806a5404a69583ad18a7.setContent(html_58a345629af982533b0e06b9f34196ba);
+        
+
+        marker_dbc6b9ee95d0290f6e62ba4aaecdc467.bindPopup(popup_346bbe6a0e21806a5404a69583ad18a7)
+        ;
+
+        
+    
+    
+            var marker_fb638b88dafcf9263b269ddda989d9f9 = L.marker(
+                [48.1104, -1.65391],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_20ba78cda7b78c5ed7aac91a33485ed7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_fb638b88dafcf9263b269ddda989d9f9.setIcon(icon_20ba78cda7b78c5ed7aac91a33485ed7);
+        
+    
+        var popup_4fa3ca81c5168e27f92adfc5cdb5f322 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73fabcdce4e1698d49f69b8aa861d3c5 = $(`<div id="html_73fabcdce4e1698d49f69b8aa861d3c5" style="width: 100.0%; height: 100.0%;">RENNES - Centre Plaine de Baud (SDIS)1re injection (avec 2de injection) vaccin COVID-19 (Pfizer-BioNTech)</div>`)[0];
+            popup_4fa3ca81c5168e27f92adfc5cdb5f322.setContent(html_73fabcdce4e1698d49f69b8aa861d3c5);
+        
+
+        marker_fb638b88dafcf9263b269ddda989d9f9.bindPopup(popup_4fa3ca81c5168e27f92adfc5cdb5f322)
+        ;
+
+        
+    
+    
+            var marker_79626d1cfb474b4edc58805f886fb696 = L.marker(
+                [47.4364, -1.50038],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_22378a23fe68d04f963a343a89ce4748 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_79626d1cfb474b4edc58805f886fb696.setIcon(icon_22378a23fe68d04f963a343a89ce4748);
+        
+    
+        var popup_ffaa69a820550035246fd8ebab4872ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9cbcc6a8359960b52d0e91c6f7add990 = $(`<div id="html_9cbcc6a8359960b52d0e91c6f7add990" style="width: 100.0%; height: 100.0%;">Centre de Vaccination - NORT SUR ERDRE - Complexe Marie-Amélie le Fur1re injection (avec 2de injection) vaccin COVID-19 (Moderna)</div>`)[0];
+            popup_ffaa69a820550035246fd8ebab4872ab.setContent(html_9cbcc6a8359960b52d0e91c6f7add990);
+        
+
+        marker_79626d1cfb474b4edc58805f886fb696.bindPopup(popup_ffaa69a820550035246fd8ebab4872ab)
+        ;
+
+        
+    
+    
+            var marker_9b17064e88f4cec9d3b472f94d570afc = L.marker(
+                [47.248, -0.0781859],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_8447d3bf671271cabbb01f1acf27d228 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9b17064e88f4cec9d3b472f94d570afc.setIcon(icon_8447d3bf671271cabbb01f1acf27d228);
+        
+    
+        var popup_ac9d7c28692f4b6662f952d5c6c0d65d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d06c96048a750feeda1a69e53549b603 = $(`<div id="html_d06c96048a750feeda1a69e53549b603" style="width: 100.0%; height: 100.0%;"> Centre Vaccination Covid-19 - Ile des enfants1re injection (avec 2de injection) vaccin COVID-19 enfants (5-11 ans - Pfizer-BioNTech)</div>`)[0];
+            popup_ac9d7c28692f4b6662f952d5c6c0d65d.setContent(html_d06c96048a750feeda1a69e53549b603);
+        
+
+        marker_9b17064e88f4cec9d3b472f94d570afc.bindPopup(popup_ac9d7c28692f4b6662f952d5c6c0d65d)
+        ;
+
+        
+    
+    
+            var marker_f7e7acac6b36e2aaf2ae2170999585eb = L.marker(
+                [48.548, -2.78771],
+                {}
+            ).addTo(map_1fe306a6864282f11a1ac025c7fe4e40);
+        
+    
+            var icon_8b781885f3929d3ca598c78f3b36d78c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "medkit", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f7e7acac6b36e2aaf2ae2170999585eb.setIcon(icon_8b781885f3929d3ca598c78f3b36d78c);
+        
+    
+        var popup_43d16283e9fbe5c76fe3a686e94d2bf5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce64ccb99c08b11bbe3c7a325adc9c64 = $(`<div id="html_ce64ccb99c08b11bbe3c7a325adc9c64" style="width: 100.0%; height: 100.0%;">PLERIN - Hôp. Privé Côtes d'Armor (enfants)1re injection (avec 2de injection) vaccin COVID-19 enfants (5-11 ans - Pfizer-BioNTech)</div>`)[0];
+            popup_43d16283e9fbe5c76fe3a686e94d2bf5.setContent(html_ce64ccb99c08b11bbe3c7a325adc9c64);
+        
+
+        marker_f7e7acac6b36e2aaf2ae2170999585eb.bindPopup(popup_43d16283e9fbe5c76fe3a686e94d2bf5)
+        ;
+
+        
+    
+</script>
