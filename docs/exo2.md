@@ -1,5 +1,6 @@
 # Réseau de publications scientifiques
 
+<iframe src="graph.html" class="is-fullwidth" height="600px" width="100%" title="Graphe social du top 20 des auteurs"></iframe>
 
 Sur ce graphe, il est possible de visualiser les liens qu'ont les auteurs entre eux. Ces liens représentent les articles co-écrits. 
 Pour construire ce graphe, il a été sélectionné les 20 auteurs ayant publié le plus d'articles sur la base de données HAL de 2021 puis pour chacun d'entre eux une liste d'article a été généré. Ces deux première étapes ont été réalisé à l'aide deux requêtes :
@@ -13,4 +14,3 @@ Avec ces deux tables, il est possible de construire la base du graphe qui sera c
 - table nodes qui contient un id (chiffre généré dans l'ordre d'apparition d'un auteur dans la table *auteurs*), le label de l'auteur (nom et prénom) ainsi que le groupe dans lequel il appartient. Un auteur ayant écrit moins de 10 articles est du groupe C, entre 10 et 15 articles du groupe B et plus de 15 articles du groupe A. 
 - tables edges qui contient les paires d'auteurs (from, to) et le nombre d'articles en communs qui définit la taille des arêtes. 
 
-<iframe src="graph.html" class="is-fullwidth" height="600px" width="100%" title="Graphe social du top 20 des auteurs"></iframe>
