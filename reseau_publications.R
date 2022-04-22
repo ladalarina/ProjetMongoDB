@@ -87,7 +87,7 @@ colnames(edges) <- c("value","from", "to")
 nodes <- auteurs_articles %>% select(nom_prenom, nb_articles) 
 nodes <- unique(nodes)
 nodes$nb_articles <- as.numeric(nodes$nb_articles)
-nodes <- nodes %>% mutate(groupe = case_when(nodes$nb_articles>=20 ~ "A", 
+nodes <- nodes %>% mutate(groupe = case_when(nodes$nb_articles>=15 ~ "A", 
                                              (nodes$nb_articles<=15)&(nodes$nb_articles>10) ~ "B",
                                              nodes$nb_articles<=10 ~ "C"))
 nodes <- nodes[-2]
@@ -95,6 +95,6 @@ colnames(auteurs_chiffres) <- c("nom_prenom", "num")
 nodes <- merge(auteurs_chiffres, nodes, by="nom_prenom")
 colnames(nodes) <- c("label", "id", "group")
 
-graph <- visNetwork(nodes,edges)%>% visLegend(main="Groupes", position = "left", width = 0.1) #Nombre d'articles écrits : A = plus de 20, B = entre 10 et 15, C = moins de 10
+graph <- visNetwork(nodes,edges)%>% visLegend(main="Groupes", position = "right", width = 0.1) #Nombre d'articles écrits : A = plus de 20, B = entre 10 et 15, C = moins de 10
 visSave(graph, "docs/graph.html", selfcontainded=TRUE, bacground="white")
 
