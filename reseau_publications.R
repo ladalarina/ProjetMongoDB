@@ -94,5 +94,7 @@ nodes <- nodes[-2]
 colnames(auteurs_chiffres) <- c("nom_prenom", "num")
 nodes <- merge(auteurs_chiffres, nodes, by="nom_prenom")
 colnames(nodes) <- c("label", "id", "group")
+
 graph <- visNetwork(nodes,edges)%>% visLegend(main="Groupes", position = "right", width = 0.1) #Nombre d'articles écrits : A = plus de 20, B = entre 10 et 15, C = moins de 10
 visSave(graph, "docs/graph.htm", selfcontainded=TRUE, bacground="white")
+
