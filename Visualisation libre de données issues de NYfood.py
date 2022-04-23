@@ -15,7 +15,12 @@ coll = db["NYfood"]
 
 # Première idée : histogramme des quartiers renseignant sur la proportion du type de cuisine
 
-# Seconde idée : carte des restaurants avec code couleur selon la note moyenne et affichage du type de cuisine au survol
+
+
+
+
+# Seconde idée : carte des restaurants avec code couleur selon le quartier, taille des points selon la note moyenne
+
 ##Le nombre de restaurants étant élevé, on se limitera à 100 restaurants tirés au hasard ayant un grade de A
 ## J'ai voulu prendre les 100 premiers restaurants rangés par ordre décroissant de la note moyenne mais ils étaient quasiment tous avec une note moyenne de 13 donc peu pertinent à visualiser
 cursor = coll.aggregate([
