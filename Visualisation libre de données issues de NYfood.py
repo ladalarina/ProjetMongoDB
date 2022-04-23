@@ -5,7 +5,7 @@ from bokeh.models import HoverTool, ColumnDataSource, ColorPicker, Legend
 from bokeh.plotting import figure, output_file, show, ColumnDataSource
 import numpy as np
 
-
+output_file("docs/NYfood_map.html")
 # connection a au serveur et à la bd
 db_uri = "mongodb+srv://etudiant:ur2@clusterm1.0rm7t.mongodb.net/"
 client = MongoClient(db_uri)
@@ -21,7 +21,7 @@ coll = db["NYfood"]
 
 # Seconde idée : carte des restaurants avec code couleur selon le quartier, taille des points selon la note moyenne
 
-##Le nombre de restaurants étant élevé, on se limitera à 100 restaurants tirés au hasard ayant un grade de A
+##Le nombre de restaurants étant élevé, on se limitera à 200 restaurants tirés au hasard ayant un grade de A
 ## J'ai voulu prendre les 100 premiers restaurants rangés par ordre décroissant de la note moyenne mais ils étaient quasiment tous avec une note moyenne de 13 donc peu pertinent à visualiser
 cursor = coll.aggregate([
     {"$unwind": "$grades"},
@@ -39,7 +39,7 @@ cursor = coll.aggregate([
               "note_moy": {"$avg": "$_id.note"},
              }
     },
-    {"$limit" : 100}
+    {"$limit" : 200}
 ])
 
 data = list(cursor)
@@ -70,30 +70,37 @@ resto['pointsY'] = pointsY
 taille_points = resto.iloc[:,2].apply(lambda x: x*1.3)
 resto["taille_points"] = taille_points
 
+## Position aberrante pour le restaurant : "Rosseti'S Pizza", on le supprime
+index = resto[resto['nom']=="Rossetti'S Pizza"].index
+resto.drop([index.values[0]], inplace = True )
 ## Couleur différente selon le quartier
 quartiers= []
 for q in resto["quartier"] :
     if q not in quartiers:
         quartiers.append(q)
+
 Q1 = resto[resto["quartier"]==quartiers[0]]
 Q2 = resto[resto["quartier"]==quartiers[1]]
 Q3 = resto[resto["quartier"]==quartiers[2]]
 Q4 = resto[resto["quartier"]==quartiers[3]]
+Q5 = resto[resto["quartier"]==quartiers[4]]
 
 ## Création graphe :
 Q1 = ColumnDataSource(Q1)
 Q2 = ColumnDataSource(Q2)
 Q3 = ColumnDataSource(Q3)
 Q4 = ColumnDataSource(Q4)
+Q5 = ColumnDataSource(Q5)
 
 p1 = figure(x_axis_type="mercator", y_axis_type="mercator", active_scroll="wheel_zoom",
-            title="Restaurants de New York", plot_width=1400,plot_height=600)
+            title="200 restaurants aléatoires de New York ayant un grade A", plot_width=1400,plot_height=600)
 tile_provider = get_provider(Vendors.CARTODBPOSITRON)
 p1.add_tile(tile_provider)
 q1 = p1.circle(x='pointsX', y='pointsY', size='taille_points', fill_alpha=0.5, source=Q1, fill_color='blue')
 q2 = p1.circle(x='pointsX', y='pointsY', size='taille_points', fill_alpha=0.5, source=Q2, fill_color='turquoise')
 q3 = p1.circle(x='pointsX', y='pointsY', size='taille_points', fill_alpha=0.5, source=Q3, fill_color='violet')
 q4 = p1.circle(x='pointsX', y='pointsY', size='taille_points', fill_alpha=0.5, source=Q4, fill_color='steelblue')
+q5 = p1.circle(x='pointsX', y='pointsY', size='taille_points', fill_alpha=0.5, source=Q5, fill_color='burlywood')
 
 # Ajout d'un widget au survol des points
 hover_tool = HoverTool(tooltips=[('Nom', '@nom'),('Quartier', '@quartier'),('Note moyenne', '@note_moy')])
@@ -103,14 +110,13 @@ p1.add_tools(hover_tool)
 legend = Legend(items=[(quartiers[0], [q1]),
                        (quartiers[1], [q2]),
                        (quartiers[2], [q3]),
-                       (quartiers[3], [q4]),], location = 'top')
+                       (quartiers[3], [q4]),
+                       (quartiers[4], [q5])], location = 'top')
 p1.add_layout(legend,'left')
 
 legend.click_policy="hide"
 legend.title = "Cliquer sur les quartiers à afficher"
 show(p1)
-output_file("docs/NYfood_map.html")
-
 
 
 
