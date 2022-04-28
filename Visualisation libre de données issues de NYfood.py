@@ -1,9 +1,10 @@
 from pymongo import MongoClient
 from pandas import *
 from bokeh.tile_providers import  get_provider, Vendors
-from bokeh.models import HoverTool, ColumnDataSource, ColorPicker, Legend
+from bokeh.models import HoverTool, ColumnDataSource, Legend
 from bokeh.plotting import figure, output_file, show, ColumnDataSource
 import numpy as np
+import plotly.express as px
 
 output_file("docs/NYfood_map.html")
 # connection a au serveur et à la bd
@@ -14,11 +15,53 @@ coll = db["NYfood"]
 # print(coll.index_information())
 
 # Première idée : histogramme des quartiers renseignant sur la proportion du type de cuisine
-
-
-
-
-
+cursor = coll.aggregate([
+    {
+    "$match": {"borough": {"$ne": "Missing"}}},
+    { "$group": {
+         "_id": {
+            "borough" :"$borough",
+            "cuisine":"$cuisine"
+         },
+         "nb": { "$sum": 1 }
+      },
+  },
+  {
+      "$sort": {"nb": -1}
+  },
+  {
+      "$group": {
+          "_id": "$_id.borough",
+          "cuisines": {
+              "$push": {
+                  "cuisine": "$_id.cuisine",
+                  "count": { "$sum": "$nb" }
+              }
+          },
+      }
+  },
+  {
+        "$project": {
+            "_id": 1,
+            "cuisines": {
+                "$slice": [ "$cuisines", 3 ]
+            }
+        }
+    }
+])
+data = list(cursor)
+new_data = {"cuisine" : [], "quartier" : [], "nb": []}
+for i in data:
+    for c in i['cuisines']:
+        new_data['quartier'].append(i['_id'])
+        new_data['cuisine'].append(c['cuisine'])
+        new_data['nb'].append(c['count'])
+resto = DataFrame(columns = ["quartier", "cuisine", "nb"])
+for key, val in new_data.items():
+    resto[key] = val
+fig = px.bar(resto, x="quartier", y="nb", color="cuisine", title="Top-3 cuisines par quartier")
+# fig.show()
+fig.write_html('docs/top_cuisine.html')
 # Seconde idée : carte des restaurants avec code couleur selon le quartier, taille des points selon la note moyenne
 
 ##Le nombre de restaurants étant élevé, on se limitera à 200 restaurants tirés au hasard ayant un grade de A
@@ -72,7 +115,8 @@ resto["taille_points"] = taille_points
 
 ## Position aberrante pour le restaurant : "Rosseti'S Pizza", on le supprime
 index = resto[resto['nom']=="Rossetti'S Pizza"].index
-resto.drop([index.values[0]], inplace = True )
+if len(index.values) > 0:
+    resto.drop([index.values[0]], inplace = True )
 ## Couleur différente selon le quartier
 quartiers= []
 for q in resto["quartier"] :
@@ -116,7 +160,7 @@ p1.add_layout(legend,'left')
 
 legend.click_policy="hide"
 legend.title = "Cliquer sur les quartiers à afficher"
-show(p1)
+# show(p1)
 
 
 
