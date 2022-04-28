@@ -6,4 +6,4 @@ Dans un premier temps nous avons choisit de représenter une carte des restauran
 
 ## Seconde visualisation
 Dans un second temps nous avons décidé faire une représentation via un barreplot par groupe de Top 3 cuisines les plus représentées pour chaque quartier.
-<iframe src="docs/top_cuisine.html" class="is-fullwidth" height="600px" width="100% </iframe>
+<iframe src="docs/top_cuisine.html" class="is-fullwidth" height="600px" width="100%"></iframe>
